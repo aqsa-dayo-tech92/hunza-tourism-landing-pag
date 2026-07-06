@@ -1,0 +1,511 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Hunza Assignment - Full Page</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif;
+            background-color: white;
+            padding-bottom: 100px; 
+        }
+        .navbar {
+            width: 85%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .logo {
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-dot {
+            color: red;
+        }
+        .nav-links {
+            float: right;
+            margin-top: 5px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: gray;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+        .btn-trip {
+            background-color: black;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        .main-container {
+            width: 85%;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .left-box {
+            width: 50%;
+            float: left;
+            padding-top: 40px;
+        }
+        .right-box {
+            width: 50%;
+            float: right;
+            text-align: right;
+        }
+        .tagline {
+            color: green;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .heading {
+            font-size: 50px;
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+        .heading-red {
+            color: red;
+        }
+        .paragraph {
+            color: gray;
+            width: 80%;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .btn-escape {
+            background-color: black;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .link-see {
+            color: black;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .image-div {
+            position: relative;
+            display: inline-block;
+        }
+        .main-image {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+        .small-card {
+            position: absolute;
+            bottom: 20px;
+            left: -20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: left;
+            width: 120px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        .card-number {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .card-text {
+            color: gray;
+            font-size: 11px;
+        }
+        .places-section {
+            width: 85%;
+            margin: 80px auto;
+            overflow: hidden;
+        }
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .section-desc {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            width: 300px;
+        }
+        .grid-container {
+            overflow: hidden;
+            width: 100%;
+        }
+        .left-grid {
+            width: 48%;
+            float: left;
+        }
+        .right-grid {
+            width: 48%;
+            float: right;
+        }
+        .right-sub-top {
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        .sub-card-left {
+            width: 48%;
+            float: left;
+        }
+        .sub-card-right {
+            width: 48%;
+            float: right;
+        }
+        .right-sub-bottom {
+            width: 100%;
+            clear: both;
+        }
+        .card-box {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        .card-box img {
+            width: 100%;
+            display: block;
+            height: auto;
+            object-fit: cover;
+        }
+        .left-grid .card-box img { height: 380px; }
+        .right-sub-top .card-box img { height: 180px; }
+        .right-sub-bottom .card-box img { height: 184px; }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            color: white;
+            text-align: left;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        }
+        .card-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .card-info {
+            font-size: 11px;
+            color: #e0e0e0;
+            line-height: 1.3;
+        }
+        .features-section {
+            width: 85%;
+            margin: 80px auto;
+            overflow: hidden;
+        }
+        .feat-left {
+            width: 45%;
+            float: left;
+        }
+        .feat-left img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+        .feat-right {
+            width: 50%;
+            float: right;
+            padding-left: 20px;
+        }
+        .feat-tag {
+            color: red;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .feat-main-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0 30px 0;
+        }
+        .feat-item {
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        .feat-num {
+            float: left;
+            width: 10%;
+            color: red;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 2px;
+        }
+        .feat-text-box {
+            float: left;
+            width: 90%;
+        }
+        .feat-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .feat-desc {
+            color: gray;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+     
+        .pricing-section {
+            width: 85%;
+            margin: 80px auto;
+            overflow: hidden;
+        }
+        .black-card {
+            background-color: #161616;
+            color: white;
+            border-radius: 30px;
+            padding: 50px;
+            overflow: hidden;
+        }
+        .price-left {
+            width: 60%;
+            float: left;
+        }
+        .price-tag {
+            color: #ff5a5a;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .price-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .price-desc {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .chips-container span {
+            background-color: #262626;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 10px;
+            color: #ccc;
+        }
+        
+       
+        .price-right {
+            width: 35%;
+            float: right;
+            text-align: center;
+        }
+        .inner-white-card {
+            background-color: #222;
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 40px 20px;
+            display: inline-block;
+            width: 100%;
+            max-width: 240px;
+        }
+        .inner-tag {
+            font-size: 10px;
+            color: #888;
+            letter-spacing: 1px;
+        }
+        .inner-amount {
+            font-size: 42px;
+            font-weight: bold;
+            color: #ff5a5a;
+            margin: 10px 0 5px 0;
+        }
+        .inner-sub {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 25px;
+        }
+        .btn-book {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            width: 80%;
+        }
+
+       
+      
+    </style>
+</head>
+<body>
+
+  
+    <div class="navbar">
+        <div class="logo">Hunza<span class="logo-dot">.</span></div>
+        <div class="nav-links">
+            <a href="#">Explore</a>
+            <a href="#">Stay</a>
+            <a href="#">Book</a>
+            <a href="#" class="btn-trip">Plan a trip</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="left-box">
+            <span class="tagline">GILGIT-BALTISTAN, PAKISTAN</span>
+            <h1 class="heading">
+                Where the<br>
+                mountains<br>
+                <span class="heading-red">breathe.</span>
+            </h1>
+            <p class="paragraph">
+                Wake to glacier-blue lakes, golden orchards, and peaks that brush the sky. 
+                Five days in Hunza, planned end to end.
+            </p>
+            <div>
+                <a href="#" class="btn-escape">Plan your escape</a>
+                <a href="#" class="link-see">See the valley &rarr;</a>
+            </div>
+        </div>
+
+        <div class="right-box">
+            <div class="image-div">
+                <img src="hunza.jpeg" class="main-image">
+                <div class="small-card">
+                    <div class="card-number">7,788m</div>
+                    <div class="card-text">Rakaposhi peak</div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="places-section">
+        <h2 class="section-title">Places that stay with you</h2>
+        <p class="section-desc">A handful of sights that make the journey north worth every mile.</p>
+
+        <div class="grid-container">
+            <div class="left-grid">
+                <div class="card-box">
+                    <img src="Hunza1.jpg" alt="Attabad Lake">
+                    <div class="card-content">
+                        <div class="card-name">Attabad Lake</div>
+                        <div class="card-info">Glide across turquoise water born from a 2010 landslide.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-grid">
+                <div class="right-sub-top">
+                    <div class="sub-card-left">
+                        <div class="card-box">
+                            <img src="Hunza2.jpeg" alt="Karakoram">
+                            <div class="card-content">
+                                <div class="card-name">Karakoram views</div>
+                                <div class="card-info">Peaks in every direction.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-card-right">
+                        <div class="card-box">
+                            <img src="Hunza3.jpeg" alt="Karimabad">
+                            <div class="card-content">
+                                <div class="card-name">Karimabad</div>
+                                <div class="card-info">Hillside town & old forts.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-sub-bottom">
+                    <div class="card-box">
+                        <img src="Hunza4.jpeg" alt="Khunjerab Pass">
+                        <div class="card-content">
+                            <div class="card-name">Khunjerab Pass</div>
+                            <div class="card-info">The highest paved border crossing on Earth.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="features-section">
+        <div class="feat-left">
+            <img src="Hunza5.jpeg" alt="Hunza Feature">
+        </div>
+        <div class="feat-right">
+            <span class="feat-tag">Why Hunza</span>
+            <h2 class="feat-main-title">An easy yes for the soul.</h2>
+            
+            <div class="feat-item">
+                <div class="feat-num">01</div>
+                <div class="feat-text-box">
+                    <div class="feat-title">Nature unlike anywhere</div>
+                    <div class="feat-desc">Glacial lakes, apricot orchards, and five of the world's tallest peaks in one valley.</div>
+                </div>
+            </div>
+
+            <div class="feat-item">
+                <div class="feat-num">02</div>
+                <div class="feat-text-box">
+                    <div class="feat-title">Living history</div>
+                    <div class="feat-desc">Walk through 800-year-old forts once home to the Mirs of Hunza.</div>
+                </div>
+            </div>
+
+            <div class="feat-item">
+                <div class="feat-num">03</div>
+                <div class="feat-text-box">
+                    <div class="feat-title">Famous warmth</div>
+                    <div class="feat-desc">Hunza's people are known for kindness, longevity, and an unforgettable welcome.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="pricing-section">
+        <div class="black-card">
+            <div class="price-left">
+                <span class="price-tag">Signature Trip</span>
+                <h2 class="price-title">5-Day Hunza Escape</h2>
+                <p class="price-desc">Guided tours, mountain-view stays, local food, and all transport—handpicked.</p>
+                <div class="chips-container">
+                    <span>Daily guides</span>
+                    <span>Hotels</span>
+                    <span>Food</span>
+                    <span>Transport</span>
+                </div>
+            </div>
+
+            <div class="price-right">
+                <div class="inner-white-card">
+                    <span class="inner-tag">FROM</span>
+                    <div class="inner-amount">$299</div>
+                    <div class="inner-sub">per person</div>
+                    <a href="#" class="btn-book">Book now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
